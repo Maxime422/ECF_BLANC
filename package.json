@@ -1,7 +1,7 @@
 {
-	"name": "dashboard",
+	"name": "FoodFamily",
 	"version": "1.0.0",
-	"description": "Dashboard Projet Mangagement",
+	"description": "FoodFamily est un site chaleureux qui permet à toute la famille de se réunir autour de bons repas à partager jusqu'à la dernière miette !",
 	"main": "index.js",
 	"scripts": {
 		"format": "prettier . --check",
@@ -9,14 +9,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Maxime422/TEMPLATE.git"
+		"url": "git+https://github.com/Maxime422/ECF_BLANC.git"
 	},
 	"author": "Maxime Germis",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Maxime422/TEMPLATE/issues"
+		"url": "https://github.com/Maxime422/ECF_BLANC/issues"
 	},
-	"homepage": "https://github.com/Maxime422/TEMPLATE#readme",
+	"homepage": "https://github.com/Maxime422/ECF_BLANC#readme",
 	"dependencies": {
 		"express": "^4.21.2",
 		"lodash": "^4.17.21",

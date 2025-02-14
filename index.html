@@ -3,15 +3,15 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>FoodFamily</title>
 
-		<meta name="description" content="..." />
+		<meta name="description" content="FoodFamily est un site chaleureux qui permet à toute la famille de se réunir autour de bons repas à partager jusqu'à la dernière miette !" />
 		<meta name="author" content="Maxime Germis" />
 
-        <link rel="icon" type="image/png" sizes="76x76" href="..." />
+		<link rel="icon" type="image/png" sizes="76x76" href="..." />
 
 		<link rel="stylesheet" href="CSS/variables.css" />
-		<link rel="stylesheet" href="CSS/style.css" />
+		<link rel="stylesheet" href="CSS/style-all-pages.css" />
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,10 +21,194 @@
 			rel="stylesheet"
 		/>
 
-		<script src="script.js" defer></script>
+		<script src="JS/script.js" defer></script>
 	</head>
+	<body>
+		<!-- Header -->
+		<header id="firstHeader">
+			<!-- Logo et navigations -->
+			<div class="container">
+				<a href="index.html">
+					<i class="fa-solid fa-burger"></i>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="categories.html">Toutes les catégories</a>
+						</li>
+						<li>
+							<a href="categorie.html">Catégorie</a>
+						</li>
+						<li>
+							<a href="meal.html">Repas</a>
+						</li>
+						<li>
+							<a href="first-letter.html">Première lettre</a>
+						</li>
+						<li>
+							<a href="areas.html">Catégories par zone</a>
+						</li>
+						<li>
+							<a href="area.html">Catégorie par zone</a>
+						</li>
+						<li>
+							<a href="ingredient.html">Ingrédients</a>
+						</li>
+					</ul>
+				</nav>
+				<div>
+					<!-- Zone de recherche -->
+					<form action="GET">
+						<input type="search" name="searchHeader" id="searchHeader" />
+						<input type="submit" value="Rechecher" class="cta mainCta" />
+					</form>
+					<a href="index.html"> </a>
+				</div>
+			</div>
+		</header>
 
-	<body></body>
+		<!-- Main -->
+		<main>
+			<!-- Zone de flotaison -->
+			<section id="zf" class="container">
+				<article>
+					<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit laboriosam neque facere qui molestias ut ipsam quas. Aspernatur ducimus aliquam reiciendis ut dolore, nulla
+						pariatur, id voluptatem laboriosam, debitis corporis!
+					</p>
+					<div>
+						<button class="cta mainCta" id="NextMeal">Prochain Repas</button>
+						<a href="#" class="cta subCta">Tous les repas</a>
+					</div>
+				</article>
+				<figure>
+					<img src="IMG/lily-banse--YHSwy6uqvk-unsplash.jpg" alt="Image de repas convivials" />
+				</figure>
+			</section>
+
+			<!-- Section Notre sélection -->
+			<section id="SectionSelection" class="container">
+				<h2>Notre sélection</h2>
+				<article class="articleSelection">
+					<a href="#">
+						<img src="#" alt="Image de repas" />
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<span>Lorem ipsum dolor sit amet.</span>
+						<a href="#" class="ctaAlt">Prochain Repas</a>
+					</a>
+				</article>
+
+				<article class="articleSelection">
+					<a href="#">
+						<img src="#" alt="Image de repas" />
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<span>Lorem ipsum dolor sit amet.</span>
+						<a href="#" class="ctaAlt">Prochain Repas</a>
+					</a>
+				</article>
+
+				<article class="articleSelection">
+					<a href="#">
+						<img src="#" alt="Image de repas" />
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<span>Lorem ipsum dolor sit amet.</span>
+						<a href="#" class="ctaAlt">Prochain Repas</a>
+					</a>
+				</article>
+			</section>
+
+			<!-- Section Nos catégories -->
+			<section id="SectionCategories" class="container">
+				<h2>Nos catégories</h2>
+				<article class="articleSelection">
+					<a href="#">
+						<img src="#" alt="Image de repas" />
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<span>Lorem ipsum dolor sit amet.</span>
+						<a href="#" class="ctaAlt">Prochain Repas</a>
+					</a>
+				</article>
+
+				<article class="articleSelection">
+					<a href="#">
+						<img src="#" alt="Image de repas" />
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<span>Lorem ipsum dolor sit amet.</span>
+						<a href="#" class="ctaAlt">Prochain Repas</a>
+					</a>
+				</article>
+
+				<article class="articleSelection">
+					<a href="#">
+						<img src="#" alt="Image de repas" />
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+						<span>Lorem ipsum dolor sit amet.</span>
+						<a href="#" class="ctaAlt">Prochain Repas</a>
+					</a>
+				</article>
+			</section>
+		</main>
+
+		<!-- Footer et navigation -->
+		<footer id="footerPage">
+			<!-- Logo -->
+			<div class="container">
+				<a href="index.html">
+					<i class="fa-solid fa-burger"></i>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="random.html">Notre sélection</a>
+						</li>
+						<li>
+							<a href="categories.html">Toutes les catégories</a>
+						</li>
+						<li>
+							<a href="categorie.html">Catégorie</a>
+						</li>
+						<li>
+							<a href="meal.html">Repas</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="first-letter.html">Première lettre</a>
+						</li>
+						<li>
+							<a href="areas.html">Catégories par zone</a>
+						</li>
+						<li>
+							<a href="area.html">Catégorie par zone</a>
+						</li>
+						<li>
+							<a href="ingredient.html">Ingrédients</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- Conditions générales -->
+				<div>
+					<a href="#">
+						<span>(©) 2024 FoodFamily - Tous droits réservé</span>
+					</a>
+					<a href="#">
+						<span>Sécurité</span>
+					</a>
+					<a href="#">
+						<span>Tremes</span>
+					</a>
+					<a href="#">
+						<span>Conditions</span>
+					</a>
+					<a href="https://github.com/Maxime422">
+						<span>Maxime Germis</span>
+					</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<!-- Script PWA -->
 	<script>
 		window.addEventListener('load', () => {
 			if ('serviceWorker' in navigator) {
