@@ -1,22 +1,11 @@
-const nextMeal = document.querySelector('#NextMeal');
-nextMeal.addEventListener(`click`, getData);
+/* eslint-disable prefer-const */
+const buttonRandom = document.querySelector('#buttonRandom');
+buttonRandom.addEventListener(`click`, () => {
+	randomMeal();
+});
 
-// function RandomMeal() {
-
-// 	const section = document.getElementById('zf');
-// 	const article = document.createElement(`article`);
-// 	const p = document.createElement('p');
-//     p.textContent = getData();
-//     console.log(p);
-
-//     section.appendChild(article);
-//     article.appendChild(p);
-    
-// 	// location.href = 'random.html';
-// }
-
-async function getData() {
-	const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+async function randomMeal() {
+	const url = 'https://www.themealdb.com/api/json/v1/1/random.php';
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {
@@ -25,25 +14,32 @@ async function getData() {
 
 		const json = await response.json();
 		console.log(json);
-        console.log(json.array);
-        const ul = document.createElement("ul");
-        for (let i = 0; i <= 100; i++) {
-            console.log(json.meals.idMeal);
-          }
-        
 
-        const section = document.getElementById('zf');
-        section.appendChild(ul);
-
-
+		await Meal(json);
 	} catch (error) {
 		console.error(error.message);
 	}
 }
 
+function Meal(json) {
+	const section = document.getElementById(`randomMealsSection`);
+	section.innerHTML = ``;
 
-// for (const element in json) {
-//     var li = document.createElement("li");
-//     li.innerHTML = element + ' : ' + json[element];
-//     ul.appendChild(li);
-// }
+	const randomMeal = json.meals[0];
+	console.log(randomMeal);
+
+	let article = document.createElement(`article`);
+	let title = document.createElement(`h3`);
+	title.textContent = randomMeal.strMeal;
+
+	let category = document.createElement(`span`);
+	category.textContent = ` Catégorie : ${randomMeal.strCategory}`;
+
+	let zone = document.createElement(`span`);
+	zone.textContent = ` Zone Géo : ${randomMeal.strArea}`;
+
+	article.appendChild(title);
+	article.appendChild(category);
+	article.appendChild(zone);
+	section.appendChild(article);
+}
