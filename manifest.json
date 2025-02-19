@@ -5,12 +5,7 @@
 		{
 			"src": "IMG/BURGER_LOGO.png",
 			"type": "image/png",
-			"sizes": "192x192"
-		},
-		{
-			"src": "IMG/BURGER_LOGO.png",
-			"type": "image/png",
-			"sizes": "512x512"
+			"sizes": "64x64"
 		}
 	],
 	"start_url": "/",
