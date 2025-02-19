@@ -32,7 +32,7 @@
 
 	--color-orange: #f88a0c;
 	--color-orange-1: #d68120;
-	--color-orange-2: #e8a04d;
+	--color-orange-2: #d67b12;
 	--color-orange-3: #e5ae6f;
 
 	--border-gray: rgba(255, 255, 255, 0.171);
@@ -40,6 +40,7 @@
 	/* Tailles de texte */
 	--text-size-small: 0.8rem;
 	--text-size-medium: 1rem;
+	--text-size-medium-large: 1.1rem;
 	--text-size-large: 1.5rem;
 	--text-size-extra: 2.5rem;
 
@@ -67,6 +68,8 @@
 	--padding-left-right-large: 2rem 0;
 	--padding-extra: 4rem;
 	--padding-left-right-extra: 4rem 0;
+	--padding-top-bottom-large: 2rem 0;
+	--padding-top-bottom-extra: 4rem 0;
 
 	--gap-small: 0.5rem;
 	--gap-medium: 1rem;
@@ -99,6 +102,18 @@ button {
 	cursor: pointer;
 }
 
+/* IMG et figures */
+figure {
+	overflow: hidden;
+	border-radius: var(--border-radius-medium);
+}
+
+figure img {
+	width: 100%;
+	height: auto;
+	white-space: nowrap;
+}
+
 /* Gestion des fonts */
 h1 {
 	font-size: var(--text-size-extra);
@@ -107,7 +122,7 @@ h1 {
 
 h2 {
 	font-size: var(--text-size-large);
-	font-weight: var(--font-weight-extra-bold);	
+	font-weight: var(--font-weight-extra-bold);
 }
 
 i {
@@ -116,7 +131,14 @@ i {
 }
 
 h3,
+.logo span,
+.bold {
+	font-size: var(--text-size-medium-large);
+	font-weight: var(--font-weight-extra-bold);
+}
+
 h4,
+li,
 h5,
 button,
 a,
@@ -125,4 +147,28 @@ span,
 p {
 	font-size: var(--text-size-small);
 	font-weight: var(--font-weight-bold);
+}
+
+/* Classe en plus */
+.orange {
+	color: var(--color-orange);
+}
+
+.bgWhite {
+	background-color: var(--color-white-1);
+	border-radius: 1rem 1rem 0rem 0rem;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+.bold:hover {
+	text-decoration: underline;
+}
+
+input[type="radio"]:checked+label {
+	background-color: var(--color-orange);
+	color: var(--color-white);
+	border: transparent 1px solid;
 }

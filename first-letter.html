@@ -8,7 +8,7 @@
 		<meta name="description" content="FoodFamily est un site chaleureux qui permet à toute la famille de se réunir autour de bons repas à partager jusqu'à la dernière miette !" />
 		<meta name="author" content="Maxime Germis" />
 
-		<link rel="icon" type="image/png" sizes="76x76" href="..." />
+		<link rel="icon" type="image/png" sizes="76x76" href="IMG/BURGER_LOGO.png" />
 
 		<link rel="stylesheet" href="CSS/variables.css" />
 		<link rel="stylesheet" href="CSS/style-all-pages.css" />
@@ -21,38 +21,27 @@
 			rel="stylesheet"
 		/>
 
-		<script src="JS/script-letters.js" defer></script>
+		<script src="JS/script-first-letter.js" defer></script>
 	</head>
 	<body>
 		<!-- Header -->
 		<header id="firstHeader">
 			<!-- Logo et navigations -->
 			<div class="container">
-				<a href="index.html">
-					<i class="fa-solid fa-burger"></i>
+				<a href="index.html" class="logo">
+					<img src="IMG/BURGER_LOGO.png" alt="FoodFamily Logo" />
+					<span>FoodFamily</span>
 				</a>
 				<nav>
 					<ul>
 						<li>
-							<a href="random.html">Notre sélection</a>
-						</li>
-						<li>
-							<a href="categories.html">Toutes les catégories</a>
-						</li>
-						<li>
-							<a href="categorie.html">Catégorie</a>
-						</li>
-						<li>
-							<a href="meal.html">Repas</a>
+							<a href="categories.html">Catégories</a>
 						</li>
 						<li>
 							<a href="first-letter.html">Première lettre</a>
 						</li>
 						<li>
-							<a href="areas.html">Catégories par zone</a>
-						</li>
-						<li>
-							<a href="area.html">Catégorie par zone</a>
+							<a href="areas.html">Zones</a>
 						</li>
 						<li>
 							<a href="ingredient.html">Ingrédients</a>
@@ -60,54 +49,125 @@
 					</ul>
 				</nav>
 				<div>
-					<!-- Zone de recherche -->
-					<form>
-						<input type="search" name="searchHeader" id="searchHeader" />
-						<input type="submit" value="Rechecher" class="cta mainCta" />
-					</form>
-					<a href="index.html"> </a>
+					<a href="search.html" class="cta mainCta">Recherche</a>
 				</div>
 			</div>
 		</header>
 
 		<!-- Main -->
-		<main>
-			<section id="Letters">
+		<main class="container">
+			<section id="sectionCenter">
 				<h1>Recherche par order alphabétique</h1>
 
 				<form class="alphabet">
-					<input type="radio" name="alphabetletters" id="a"/>
-					<input type="radio" name="alphabetletters" id="b"/>
-					<input type="radio" name="alphabetletters" id="c"/>
-					<input type="radio" name="alphabetletters" id="d"/>
-					<input type="radio" name="alphabetletters" id="e"/>
-					<input type="radio" name="alphabetletters" id="f"/>
-					<input type="radio" name="alphabetletters" id="g"/>
-					<input type="radio" name="alphabetletters" id="h"/>
-					<input type="radio" name="alphabetletters" id="i"/>
-					<input type="radio" name="alphabetletters" id="j"/>
-					<input type="radio" name="alphabetletters" id="k"/>
-					<input type="radio" name="alphabetletters" id="l"/>
-					<input type="radio" name="alphabetletters" id="m"/>
-					<input type="radio" name="alphabetletters" id="n"/>
-					<input type="radio" name="alphabetletters" id="o"/>
-					<input type="radio" name="alphabetletters" id="p"/>
-					<input type="radio" name="alphabetletters" id="q"/>
-					<input type="radio" name="alphabetletters" id="r"/>
-					<input type="radio" name="alphabetletters" id="s"/>
-					<input type="radio" name="alphabetletters" id="t"/>
-					<input type="radio" name="alphabetletters" id="u"/>
-					<input type="radio" name="alphabetletters" id="v"/>
-					<input type="radio" name="alphabetletters" id="w"/>
-					<input type="radio" name="alphabetletters" id="x"/>
-					<input type="radio" name="alphabetletters" id="y"/>
-					<input type="radio" name="alphabetletters" id="z"/>
-
-					<input type="submit"/>
+					<span>
+						<input type="radio" name="alphabetletters" id="a" />
+						<label for="a">A</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="b" />
+						<label for="b">B</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="c" />
+						<label for="c">C</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="d" />
+						<label for="d">D</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="e" />
+						<label for="e">E</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="f" />
+						<label for="f">F</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="g" />
+						<label for="g">G</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="h" />
+						<label for="h">H</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="i" />
+						<label for="i">I</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="j" />
+						<label for="j">J</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="k" />
+						<label for="k">K</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="l" />
+						<label for="l">L</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="m" />
+						<label for="m">M</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="n" />
+						<label for="n">N</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="o" />
+						<label for="o">O</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="p" />
+						<label for="p">P</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="q" />
+						<label for="q">Q</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="r" />
+						<label for="r">R</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="s" />
+						<label for="s">S</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="t" />
+						<label for="t">T</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="u" />
+						<label for="u">U</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="v" />
+						<label for="v">V</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="w" />
+						<label for="w">W</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="x" />
+						<label for="x">X</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="y" />
+						<label for="y">Y</label>
+					</span>
+					<span>
+						<input type="radio" name="alphabetletters" id="z" />
+						<label for="z">Z</label>
+					</span>
+					<input class="cta mainCta" type="submit" />
 				</form>
 
-
-				<div id="alphabetDiv"></div>
+				<div class="grid"></div>
 			</section>
 		</main>
 
@@ -115,56 +175,59 @@
 		<footer id="footerPage">
 			<!-- Logo -->
 			<div class="container">
-				<a href="index.html">
-					<i class="fa-solid fa-burger"></i>
+				<a href="index.html" class="logo">
+					<img src="IMG/BURGER_LOGO.png" alt="FoodFamily Logo" />
+					<span>FoodFamily</span>
 				</a>
 				<nav>
 					<ul>
 						<li>
-							<a href="random.html">Notre sélection</a>
+							<span>Navigation</span>
 						</li>
 						<li>
-							<a href="categories.html">Toutes les catégories</a>
+							<a href="categories.html">Catégories</a>
 						</li>
-						<li>
-							<a href="categorie.html">Catégorie</a>
-						</li>
-						<li>
-							<a href="meal.html">Repas</a>
-						</li>
-					</ul>
-					<ul>
 						<li>
 							<a href="first-letter.html">Première lettre</a>
 						</li>
 						<li>
-							<a href="areas.html">Catégories par zone</a>
-						</li>
-						<li>
-							<a href="area.html">Catégorie par zone</a>
+							<a href="areas.html">Zones</a>
 						</li>
 						<li>
 							<a href="ingredient.html">Ingrédients</a>
 						</li>
 					</ul>
+					<ul>
+						<li>
+							<span>Resssources</span>
+						</li>
+						<li>
+							<a href="#">Infos sur l'entreprise</a>
+						</li>
+						<li>
+							<a href="#">Fonctionnement du site</a>
+						</li>
+						<li>
+							<a href="#">Conditions générales</a>
+						</li>
+						<li>
+							<a href="https://github.com/Maxime422">Maxime Germis</a>
+						</li>
+					</ul>
 				</nav>
 				<!-- Conditions générales -->
+
 				<div>
 					<a href="#">
-						<span>(©) 2024 FoodFamily - Tous droits réservé</span>
+						<span>© 2024 FoodFamily - Tous droits réservé</span>
 					</a>
-					<a href="#">
-						<span>Sécurité</span>
-					</a>
-					<a href="#">
-						<span>Tremes</span>
-					</a>
-					<a href="#">
-						<span>Conditions</span>
-					</a>
-					<a href="https://github.com/Maxime422">
-						<span>Maxime Germis</span>
-					</a>
+					<button>Français (FR)</button>
+					<button>EUR</button>
+					<div>
+						<a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+						<a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+					</div>
 				</div>
 			</div>
 		</footer>

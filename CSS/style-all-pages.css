@@ -1,82 +1,3 @@
-/* Les variables de base */
-:root {
-	--font-main: 'Montserrat', sans-serif;
-	--font-weight-bold: 600;
-	--font-weight-extra-bold: 700;
-	--font-weight-black: 800;
-
-	/* Couleurs */
-	--color-blue: #1327b7;
-	--color-blue-1: #1b41e9;
-	--color-blue-2: #3d4fd1;
-	--color-blue-3: #697af3;
-
-	--color-white: #fafafa;
-	--color-white-1: #eeedf4;
-	--color-white-2: #dedeeb;
-
-	--color-gray: #d4d4d4;
-	--color-gray-1: #adadad;
-
-	--color-black: #131313;
-	--color-black-1: #1c1b1f;
-	--color-black-2: #434141;
-
-	--color-red: #b5403c;
-	--color-red-1: #d62038;
-	--color-red-2: #991022;
-
-	--color-green: #11b86a;
-	--color-green-1: #23a166;
-	--color-green-2: #3ad98f;
-
-	--color-orange: #f88a0c;
-	--color-orange-1: #d68120;
-	--color-orange-2: #e8a04d;
-	--color-orange-3: #e5ae6f;
-
-	--border-gray: rgba(255, 255, 255, 0.171);
-
-	/* Tailles de texte */
-	--text-size-small: 0.8rem;
-	--text-size-medium: 1rem;
-	--text-size-large: 1.5rem;
-	--text-size-extra: 2.5rem;
-
-	/* Bordures */
-	--border-radius-small: 0.5rem;
-	--border-radius-medium: 1rem;
-	--border-radius-big: 2rem;
-	--border-radius-circle: 100%;
-
-	/* Les marges et espacements */
-	--margin-small: 0.5rem;
-	--margin-left-right-small: 0.5rem 0;
-	--margin-medium: 1rem;
-	--margin-left-right-medium: 1rem 0;
-	--margin-large: 2rem;
-	--margin-left-right-large: 2rem 0;
-	--margin-extra: 4rem;
-	--margin-left-right-extra: 4rem 0;
-
-	--padding-small: 0.5rem;
-	--padding-left-right-small: 0.5rem 0;
-	--padding-medium: 1rem;
-	--padding-left-right-medium: 1rem 0;
-	--padding-large: 2rem;
-	--padding-left-right-large: 2rem 0;
-	--padding-top-bottom-large: 2rem 0;
-	--padding-extra: 4rem;
-	--padding-left-right-extra: 4rem 0;
-
-	--gap-small: 0.5rem;
-	--gap-medium: 1rem;
-	--gap-large: 2rem;
-	--gap-extra: 4rem;
-}
-
-/* Code utile !!!!!!!!!!!!! */
-
 /* Container */
 .container {
 	width: 1140px;
@@ -84,7 +5,8 @@
 }
 
 /* Les Buttons et cta */
-.cta {
+.cta,
+label {
 	padding: var(--padding-small);
 	border-radius: var(--border-radius-small);
 }
@@ -94,20 +16,27 @@
 	color: var(--color-white);
 }
 
-.subCta {
+.mainCta:hover {
+	background-color: var(--color-orange-2);
+	transform: scale(1.01);
+}
+
+.subCta,
+label {
 	border: var(--color-black) 1px solid;
 	color: var(--color-black);
 }
 
-/* IMG et figures */
-figure {
-	overflow: hidden;
-	border-radius: var(--border-radius-medium);
+/* Logo */
+.logo {
+	display: flex;
+	align-items: center;
+	gap: var(--gap-medium);
+	color: var(--color-orange);
 }
 
-img {
-	width: 100%;
-	height: auto;
+.logo img {
+	width: 2rem;
 }
 
 /* Header de page */
@@ -150,30 +79,18 @@ img {
 
 #firstHeader ul li::after {
 	content: ' ';
-	background-color: var(--color-black);
+	background-color: var(--color-orange);
 	display: block;
 	width: 0;
 	height: 2px;
-	margin-top: 10px;
+	margin-top: 1px;
 	transition: all ease 0.5s;
-}
-
-/* Shearch */
-#firstHeader form {
-	display: flex;
-	align-items: center;
-	gap: var(--gap-medium);
-}
-
-#firstHeader #searchHeader {
-	background-color: var(--color-gray);
-	border-radius: var(--border-radius-small);
-	padding: var(--padding-small);
 }
 
 /* ZF section */
 #zf {
 	padding-top: var(--padding-extra);
+	padding-bottom: var(--padding-extra);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: var(--gap-large);
@@ -200,13 +117,52 @@ main {
 	gap: var(--gap-extra);
 }
 
+/* Body */
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 /* Sections */
-#SectionSelection,
-#SectionCategories {
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: var(--padding-extra);
+	padding-bottom: var(--padding-extra);
+	gap: var(--gap-large);
+}
+
+/* Sections */
+.section header {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--gap-medium);
+}
+
+.section #randomMealsSection figure {
+	height: auto;
+	width: 12rem;
+}
+
+.section #randomMealsSection {
 	display: flex;
 	align-items: center;
+	gap: var(--gap-large);
+	border-radius: var(--border-radius-medium);
+	box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+
+.section #randomMealsSection article {
+	display: flex;
 	flex-direction: column;
-	padding-bottom: var(--padding-extra);
+	padding: var(--padding-medium);
+	gap: var(--gap-small);
 }
 
 /* Footer */
@@ -235,13 +191,61 @@ main {
 	justify-content: space-between;
 }
 
+/* CSS particulier pour les différentes pages */
+/* Grid Catégories First Letters */
+.grid {
+	padding: var(--padding-top-bottom-extra);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr auto;
+	gap: var(--gap-large);
+}
+
+.grid a {
+	box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+	padding: var(--padding-medium);
+	border-radius: var(--border-radius-medium);
+	display: flex;
+	justify-content: center;
+}
+
+.grid figure {
+	width: 80%;
+	margin: auto;
+	height: auto;
+}
+
+.grid a {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-medium);
+}
+
+.grid a footer {
+	padding-top: var(--padding-medium);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#sectionCenter {
+	padding: var(--padding-top-bottom-extra);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: var(--gap-medium);
+}
+
 /* Medias query */
+/* Media 769px grand écran */
 @media (max-width: 1200px) {
 	.container {
 		width: 992px;
 	}
 }
 
+/* Media 769px petit ordinateur */
 @media (max-width: 992px) {
 	.container {
 		width: 750px;
@@ -257,11 +261,18 @@ main {
 		gap: var(--gap-extra);
 	}
 
-	#zf article p {
+	#zf article p,
+	section header {
 		width: 80%;
+	}
+
+	.grid {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
+
+/* Media 768px tablette */
 @media (max-width: 768px) {
 	.container {
 		width: 500px;
@@ -289,15 +300,16 @@ main {
 	#footerPage > div > div a:first-child {
 		order: 5;
 	}
+
+	.grid {
+		grid-template-columns: 1fr;
+	}
 }
 
+/* Media 769px smartphone */
 @media (max-width: 520px) {
 	.container {
 		width: 100%;
 		padding: var(--padding-small);
-	}
-
-	#searchHeader {
-		width: 60%;
 	}
 }

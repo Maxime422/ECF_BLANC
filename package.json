@@ -1,5 +1,5 @@
 {
-	"name": "FoodFamily",
+	"name": "foodfamily",
 	"version": "1.0.0",
 	"description": "FoodFamily est un site chaleureux qui permet à toute la famille de se réunir autour de bons repas à partager jusqu'à la dernière miette !",
 	"main": "index.js",

@@ -10,9 +10,8 @@ function searchLetters() {
 	try {
 		let letters = document.querySelector(`input[name="alphabetletters"]:checked`).id;
 		console.log(letters);
-		
-		lettersMeals(letters);
 
+		lettersMeals(letters);
 	} catch (error) {
 		console.error(error);
 	}
@@ -29,32 +28,38 @@ async function lettersMeals(letters) {
 		const json = await response.json();
 		console.log(json);
 		await Meal(json);
-
 	} catch (error) {
 		console.error(error.message);
 	}
 }
 
-
 function Meal(json) {
-	const section = document.getElementById(`alphabetDiv`);
+	const section = document.querySelector(`.grid`);
 	section.innerHTML = ``;
 
 	json.meals.forEach((foods) => {
 		console.log(foods.strMeal);
+
 		let article = document.createElement(`article`);
+		let figure = document.createElement(`figure`);
+
+		// Récupération des informations
+		let img = document.createElement(`img`);
+		img.src = foods.strMealThumb;
+
+		let a = document.createElement(`a`);
+		a.href = `/meal.html?i=${foods.idMeal}`;
+
 		let title = document.createElement(`h3`);
 		title.textContent = foods.strMeal;
-	
-		let category = document.createElement(`span`);
-		category.textContent = `Catégorie : ${foods.strCategory}`;
-	
-		let zone = document.createElement(`span`);
-		zone.textContent = ` Zone Géo : ${foods.strArea}`;
-	
-		article.appendChild(title);
-		article.appendChild(category);
-		article.appendChild(zone);
+
+		// AppendChilds
+		figure.appendChild(img);
+
+		a.appendChild(figure);
+		a.appendChild(title);
+
+		article.appendChild(a);
 		section.appendChild(article);
 	});
 }

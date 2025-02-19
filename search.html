@@ -8,7 +8,7 @@
 		<meta name="description" content="FoodFamily est un site chaleureux qui permet à toute la famille de se réunir autour de bons repas à partager jusqu'à la dernière miette !" />
 		<meta name="author" content="Maxime Germis" />
 
-		<link rel="icon" type="image/png" sizes="76x76" href="..." />
+		<link rel="icon" type="image/png" sizes="76x76" href="IMG/BURGER_LOGO.png" />
 
 		<link rel="stylesheet" href="CSS/variables.css" />
 		<link rel="stylesheet" href="CSS/style-all-pages.css" />
@@ -21,38 +21,27 @@
 			rel="stylesheet"
 		/>
 
-		<script src="script.js" defer></script>
+		<script src="JS/script-search.js" defer></script>
 	</head>
 	<body>
 		<!-- Header -->
 		<header id="firstHeader">
 			<!-- Logo et navigations -->
 			<div class="container">
-				<a href="index.html">
-					<i class="fa-solid fa-burger"></i>
+				<a href="index.html" class="logo">
+					<img src="IMG/BURGER_LOGO.png" alt="FoodFamily Logo" />
+					<span>FoodFamily</span>
 				</a>
 				<nav>
 					<ul>
 						<li>
-							<a href="random.html">Notre sélection</a>
-						</li>
-						<li>
-							<a href="categories.html">Toutes les catégories</a>
-						</li>
-						<li>
-							<a href="categorie.html">Catégorie</a>
-						</li>
-						<li>
-							<a href="meal.html">Repas</a>
+							<a href="categories.html">Catégories</a>
 						</li>
 						<li>
 							<a href="first-letter.html">Première lettre</a>
 						</li>
 						<li>
-							<a href="areas.html">Catégories par zone</a>
-						</li>
-						<li>
-							<a href="area.html">Catégorie par zone</a>
+							<a href="areas.html">Zones</a>
 						</li>
 						<li>
 							<a href="ingredient.html">Ingrédients</a>
@@ -60,74 +49,84 @@
 					</ul>
 				</nav>
 				<div>
-					<!-- Zone de recherche -->
-					<form>
-						<input type="search" name="searchHeader" id="searchHeader" />
-						<input type="submit" value="Rechecher" class="cta mainCta" />
-					</form>
-					<a href="index.html"> </a>
+					<a href="search.html" class="cta mainCta">Recherche</a>
 				</div>
 			</div>
 		</header>
 
 		<!-- Main -->
-		<main>
+		<main class="container">
+			<section id="sectionCenter">
+				<h1>Recherchez un plat</h1>
+				<!-- Zone de recherche -->
+				<section class="section searchSection">
+					<form>
+						<input type="search" name="search" class="cta" id="search" />
+						<input type="submit" value="Recheche" class="cta mainCta" id="submit" />
+					</form>
+				</section>
+			</section>
+
+			<section class="grid bgWhite"></section>
 		</main>
 
 		<!-- Footer et navigation -->
 		<footer id="footerPage">
 			<!-- Logo -->
 			<div class="container">
-				<a href="index.html">
-					<i class="fa-solid fa-burger"></i>
+				<a href="index.html" class="logo">
+					<img src="IMG/BURGER_LOGO.png" alt="FoodFamily Logo" />
+					<span>FoodFamily</span>
 				</a>
 				<nav>
 					<ul>
 						<li>
-							<a href="random.html">Notre sélection</a>
+							<span>Navigation</span>
 						</li>
 						<li>
-							<a href="categories.html">Toutes les catégories</a>
+							<a href="categories.html">Catégories</a>
 						</li>
-						<li>
-							<a href="categorie.html">Catégorie</a>
-						</li>
-						<li>
-							<a href="meal.html">Repas</a>
-						</li>
-					</ul>
-					<ul>
 						<li>
 							<a href="first-letter.html">Première lettre</a>
 						</li>
 						<li>
-							<a href="areas.html">Catégories par zone</a>
-						</li>
-						<li>
-							<a href="area.html">Catégorie par zone</a>
+							<a href="areas.html">Zones</a>
 						</li>
 						<li>
 							<a href="ingredient.html">Ingrédients</a>
 						</li>
 					</ul>
+					<ul>
+						<li>
+							<span>Resssources</span>
+						</li>
+						<li>
+							<a href="#">Infos sur l'entreprise</a>
+						</li>
+						<li>
+							<a href="#">Fonctionnement du site</a>
+						</li>
+						<li>
+							<a href="#">Conditions générales</a>
+						</li>
+						<li>
+							<a href="https://github.com/Maxime422">Maxime Germis</a>
+						</li>
+					</ul>
 				</nav>
 				<!-- Conditions générales -->
+
 				<div>
 					<a href="#">
-						<span>(©) 2024 FoodFamily - Tous droits réservé</span>
+						<span>© 2024 FoodFamily - Tous droits réservé</span>
 					</a>
-					<a href="#">
-						<span>Sécurité</span>
-					</a>
-					<a href="#">
-						<span>Tremes</span>
-					</a>
-					<a href="#">
-						<span>Conditions</span>
-					</a>
-					<a href="https://github.com/Maxime422">
-						<span>Maxime Germis</span>
-					</a>
+					<button>Français (FR)</button>
+					<button>EUR</button>
+					<div>
+						<a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+						<a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+					</div>
 				</div>
 			</div>
 		</footer>
