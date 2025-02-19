@@ -15,7 +15,7 @@ async function categoriesMeal() {
 
 		const json = await response.json();
 		console.log(json);
-		await Meal(json);
+		Meal(json);
 	} catch (error) {
 		console.error(error.message);
 	}

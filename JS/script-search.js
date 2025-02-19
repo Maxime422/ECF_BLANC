@@ -1,24 +1,26 @@
 /* eslint-disable prefer-const */
+
 const button = document.querySelector('#submit');
 button.addEventListener(`click`, searchWord);
 
 // Récupérer les section pour pouvoir les supprimer lors des nouvelles recherches
-const form = document.querySelector(`form`);
-const section = document.querySelector(`.grid`);
+const section = document.querySelector('.grid');
+const messages = document.querySelector(`.messages`);
 
 function searchWord(event) {
 	event.preventDefault();
+	section.innerHTML = '';
+	messages.innerHTML = '';
 
 	let searchValue = document.getElementById(`search`).value;
 	if (searchValue != '') {
 		searchMeal(searchValue);
-	} else if (searchValue === '') {
-		let alert = document.createElement(`span`);
-		alert.textContent = `Aucune valeur, veuillez rentrer un plat avant de valider svp`;
-		form.appendChild(alert);
+		console.log(searchValue);
+	} else {
+		let alert = document.createElement(`p`);
+		alert.textContent = `Veuillez rentrer un valeur`;
+		messages.appendChild(alert);
 	}
-
-	section.innerHTML = ``;
 	document.querySelector(`form`).reset();
 }
 
@@ -32,12 +34,14 @@ async function searchMeal(searchValue) {
 
 		const json = await response.json();
 		console.log(json);
-		if (json === null) {
-			let alert = document.createElement(`span`);
-			alert.textContent = `Aucun plat trouver, désolé`;
-			form.appendChild(alert);
+
+		if (json.meals != null && json.meals.length > 0) {
+			Meal(json);
+		} else {
+			let alert = document.createElement(`p`);
+			alert.textContent = `Plat inconnu, désolé`;
+			messages.appendChild(alert);
 		}
-		await Meal(json);
 	} catch (error) {
 		console.error(error.message);
 	}

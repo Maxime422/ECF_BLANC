@@ -13,7 +13,7 @@ async function categoriesMeal() {
 
 		const json = await response.json();
 		console.log(json);
-		await Meal(json);
+		Meal(json);
 	} catch (error) {
 		console.error(error.message);
 	}
@@ -30,6 +30,7 @@ function Meal(json) {
 	// Base de la structure (Figure et article)
 	let article = document.createElement(`article`);
 	let figure = document.createElement(`figure`);
+	figure.classList.add(`figureReduct`);
 	let img = document.createElement(`img`);
 	img.src = IdMeal.strMealThumb;
 
@@ -49,7 +50,7 @@ function Meal(json) {
 	zone.classList.add(`bold`);
 
 	let instructions = document.createElement(`a`);
-	instructions.textContent = ` Instructions : ${IdMeal.strInstructions}`;
+	instructions.textContent = `Instructions : ${IdMeal.strInstructions}`;
 
 	figure.appendChild(img);
 
@@ -62,4 +63,3 @@ function Meal(json) {
 	section.appendChild(article);
 }
 
-// Fait

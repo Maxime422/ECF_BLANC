@@ -1,34 +1,31 @@
-# Nom du Projet
-
-![Bannière du Projet](lien-vers-image)
+# ECF Blanc FoodFamily (API : TheMealDB)
 
 ## 🚀 Description
 
-Brève description du projet. Quel est son objectif ? Qui est-il destiné à aider ?
+Réalisé dans le cadre de la préparation à l'ECF Front-End du GRETA-CFA Provence. FoodFamily est un site chaleureux qui permet à toute la famille de se réunir autour de bons repas à partager jusqu'à la dernière miette !
 
 ## 🎨 Identité Visuelle
 
-- **Couleur principale :** `#VotreCouleurPrincipale`
-- **Couleur secondaire :** `#VotreCouleurSecondaire`
-- **Typographie :** `Nom de la police`
+- **Couleur principale :** Orange `#f88a0c`
+- **Couleur secondaire :** Noir `#131313`
+- **Typographie :** `Montserrat`
+- **API :** [TheMealDB](https://www.themealdb.com/api.php)
 
 ## 🔧 Technologies Utilisées
 
 - **Frontend :** `HTML`, `CSS`, `JavaScript`
-- **Frameworks/Bibliothèques :** `React`, `Vue.js`, `TailwindCSS`
-- **Backend :** `Node.js`, `Express.js`, `PHP`
-- **Base de données :** `MongoDB`, `MySQL`
-- **Outils :** `Git`, `GitHub`, `Docker`
+- **Outils :** `Prettier`, `Eslint`
+- **Versionnage et détection :** `Git`, `GitHub`, `SonarQube`
 
 ## 📦 Installation
 
 1. **Cloner le dépôt :**
     ```bash
-    git clone https://github.com/VotreNomUtilisateur/VotreRepo.git
+    git clone https://github.com/Maxime422/ECF_BLANC
     ```
 2. **Se rendre dans le dossier du projet :**
     ```bash
-    cd nom-du-projet
+    cd ECF_BLANC
     ```
 3. **Installer les dépendances :**
     ```bash
@@ -41,15 +38,13 @@ Brève description du projet. Quel est son objectif ? Qui est-il destiné à aid
 
 ## 🛠 Fonctionnalités
 
-- ✅ Fonctionnalité 1
-- ✅ Fonctionnalité 2
-- ✅ Fonctionnalité 3
+- ✅ Embarquement en application web (WPA) 
 
 ## 🚧 Améliorations Futures
 
-- [ ] Amélioration 1
-- [ ] Amélioration 2
-- [ ] Amélioration 3
+- [ ] Améliorer le style, ajouter des éléments facilitant l'UI et l'UX
+- [ ] Optimiser les scripts (JS)
+- [ ] Ajouter des liens internes entre les pages pour faciliter la navigation
 
 ## 🤝 Contribuer
 
@@ -58,10 +53,6 @@ Brève description du projet. Quel est son objectif ? Qui est-il destiné à aid
 3. **Commiter** vos modifications (`git commit -m 'Ajout nouvelle fonctionnalité'`)
 4. **Pousser** la branche (`git push origin nouvelle-fonctionnalité`)
 5. **Ouvrir** une Pull Request
-
-## 📄 Licence
-
-Ce projet est sous licence `MIT` - voir le fichier LICENSE pour plus de détails.
 
 ## 📞 Contact
 

@@ -1,12 +1,11 @@
 /* eslint-disable prefer-const */
-const buttonRandom = document.querySelector('.alphabet');
-buttonRandom.addEventListener(`submit`, () => {
+const submit = document.querySelector('.alphabet');
+submit.addEventListener(`submit`, (event) => {
+	event.preventDefault();
 	searchLetters();
 });
 
 function searchLetters() {
-	event.preventDefault();
-
 	try {
 		let letters = document.querySelector(`input[name="alphabetletters"]:checked`).id;
 		console.log(letters);
@@ -17,6 +16,9 @@ function searchLetters() {
 	}
 }
 
+const section = document.querySelector('.grid');
+const messages = document.querySelector(`.messages`);
+
 async function lettersMeals(letters) {
 	const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${letters}`;
 	try {
@@ -24,19 +26,24 @@ async function lettersMeals(letters) {
 		if (!response.ok) {
 			throw new Error(`Response status: ${response.status}`);
 		}
-
 		const json = await response.json();
 		console.log(json);
-		await Meal(json);
+
+		section.innerHTML = '';
+		messages.innerHTML = '';
+		if (json.meals != null) {
+			Meal(json);
+		} else {
+			let alert = document.createElement(`p`);
+			alert.textContent = `Aucun plat trouvé avec la lettre ${letters}`;
+			messages.appendChild(alert);
+		}
 	} catch (error) {
 		console.error(error.message);
 	}
 }
 
 function Meal(json) {
-	const section = document.querySelector(`.grid`);
-	section.innerHTML = ``;
-
 	json.meals.forEach((foods) => {
 		console.log(foods.strMeal);
 

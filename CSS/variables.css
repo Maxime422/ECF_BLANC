@@ -77,7 +77,6 @@
 	--gap-extra: 4rem;
 }
 
-/* Mode sombre par défaut */
 body {
 	background-color: var(--color-white);
 	color: var(--color-black);
@@ -102,7 +101,7 @@ button {
 	cursor: pointer;
 }
 
-/* IMG et figures */
+/* img et figures */
 figure {
 	overflow: hidden;
 	border-radius: var(--border-radius-medium);
@@ -114,7 +113,7 @@ figure img {
 	white-space: nowrap;
 }
 
-/* Gestion des fonts */
+/* Gestion des fonts et sizes */
 h1 {
 	font-size: var(--text-size-extra);
 	font-weight: var(--font-weight-black);
@@ -137,6 +136,10 @@ h3,
 	font-weight: var(--font-weight-extra-bold);
 }
 
+.bold:hover {
+	text-decoration: underline;
+}
+
 h4,
 li,
 h5,
@@ -147,28 +150,4 @@ span,
 p {
 	font-size: var(--text-size-small);
 	font-weight: var(--font-weight-bold);
-}
-
-/* Classe en plus */
-.orange {
-	color: var(--color-orange);
-}
-
-.bgWhite {
-	background-color: var(--color-white-1);
-	border-radius: 1rem 1rem 0rem 0rem;
-}
-
-input[type="radio"] {
-	display: none;
-}
-
-.bold:hover {
-	text-decoration: underline;
-}
-
-input[type="radio"]:checked+label {
-	background-color: var(--color-orange);
-	color: var(--color-white);
-	border: transparent 1px solid;
 }
