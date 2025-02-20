@@ -248,7 +248,7 @@ main {
 	justify-content: center;
 }
 
-.alphabet label{
+.alphabet label {
 	display: flex;
 }
 
@@ -265,7 +265,7 @@ main {
 	width: 70%;
 }
 
-.section form input[type="search"] {
+.section form input[type='search'] {
 	justify-content: center;
 	width: 70%;
 }
@@ -306,9 +306,25 @@ main {
 
 /* Media 768px tablette */
 @media (max-width: 768px) {
+
+
 	.container {
 		width: 500px;
 	}
+
+	#firstHeader {
+		position: relative;
+		height:8rem;
+
+	}
+
+
+	#firstHeader ul {
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	  }
 
 	#footerPage .container {
 		display: flex;
@@ -348,8 +364,4 @@ main {
 		width: 100%;
 		padding: var(--padding-small);
 	}
-	#firstHeader nav {
-		position: absolute;
-	}
-	
 }
