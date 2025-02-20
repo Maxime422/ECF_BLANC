@@ -1,8 +1,8 @@
 /* eslint-disable prefer-const */
 
-// Récupérer toutes les catégories de l'API
+// Récupérer toutes les zones de l'API
 async function categoriesMeal() {
-	const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+	const url = 'https://www.themealdb.com/api/json/v1/1/list.php?a=list';
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {
@@ -22,39 +22,22 @@ categoriesMeal();
 function Meal(json) {
 	const section = document.querySelector(`.grid`);
 
-	json.categories.forEach((foods) => {
+	json.meals.forEach((foods) => {
 		// Base de la structure (Figure et article)
 		let article = document.createElement(`article`);
-		let subText = document.createElement(`span`);
-		let footer = document.createElement(`footer`);
-		let div = document.createElement(`div`);
-		let button = document.createElement(`button`);
 		let a = document.createElement(`a`);
-		let figure = document.createElement(`figure`);
+		console.log(a);
 
 		// Récupération des informations
-		let img = document.createElement(`img`);
-		img.src = foods.strCategoryThumb;
 
-		a.href = `/categorie.html?c=${foods.strCategory}`;
+		a.href = `/area.html?a=${foods.strArea}`;
 		let title = document.createElement(`h3`);
-		title.textContent = foods.strCategory;
-		button.textContent = `En savoir plus`;
-		subText.textContent = `Catégories`;
-		button.classList.add(`cta`);
-		button.classList.add(`mainCta`);
+		title.textContent = foods.strArea;
+		a.classList.add(`cta`);
+		a.classList.add(`mainCta`);
 
 		// AppendChilds
-		figure.appendChild(img);
-
-		a.appendChild(figure);
-
-		div.appendChild(subText);
-		div.appendChild(title);
-		footer.appendChild(div);
-		footer.appendChild(button);
-		a.appendChild(footer);
-
+		a.appendChild(title);
 		article.appendChild(a);
 		section.appendChild(article);
 	});

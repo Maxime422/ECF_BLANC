@@ -52,6 +52,24 @@ function Meal(json) {
 	let instructions = document.createElement(`a`);
 	instructions.textContent = `Instructions : ${IdMeal.strInstructions}`;
 
+	const list = document.createElement('ul');
+	for (let i = 1; i <= 20; i++) {
+		const ingredient = `strIngredient${i}`;
+		const IngredientIn = IdMeal[ingredient];
+		console.log(IngredientIn);
+		if (IngredientIn === null) {
+			continue;
+		} else {
+			const li = document.createElement('li');
+			const a = document.createElement('a');
+			a.textContent = IngredientIn;
+			a.href = `/ingredient.html?i=${IngredientIn}`;
+			a.classList.add(`bold`);
+
+			li.appendChild(a);
+			list.appendChild(li);
+		}
+	}
 	figure.appendChild(img);
 
 	article.appendChild(title);
@@ -59,7 +77,7 @@ function Meal(json) {
 	article.appendChild(zone);
 	article.appendChild(instructions);
 
+	article.appendChild(list);
 	section.appendChild(figure);
 	section.appendChild(article);
 }
-
