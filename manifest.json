@@ -3,9 +3,9 @@
 	"name": "foodfamily",
 	"icons": [
 	  {
-		"src": "IMG/BURGER_LOGO_256.png",
+		"src": "IMG/BURGER_LOGO_128.png",
 		"type": "image/png",
-		"sizes": "256x256"
+		"sizes": "128x128"
 	  },
 	  {
 		"src": "IMG/BURGER_LOGO_512.png",
