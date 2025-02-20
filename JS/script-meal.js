@@ -46,7 +46,7 @@ function Meal(json) {
 
 	let zone = document.createElement(`a`);
 	zone.textContent = ` Zone Géographique : ${IdMeal.strArea}`;
-	zone.href = `categorie.html?c=${IdMeal.strArea}`;
+	zone.href = `categorie.html?a=${IdMeal.strArea}`;
 	zone.classList.add(`bold`);
 
 	let instructions = document.createElement(`a`);
