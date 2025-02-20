@@ -252,13 +252,9 @@ main {
 	display: flex;
 }
 
-#sectionCenter {
-	padding: var(--padding-top-bottom-extra);
-	display: flex;
+.center {
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	gap: var(--gap-medium);
 }
 
 .section form {
