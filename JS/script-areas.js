@@ -30,7 +30,7 @@ function Meal(json) {
 
 		// Récupération des informations
 
-		a.href = `../area.html?a=${foods.strArea}`;
+		a.href = `ECF_BLANC/area.html?a=${foods.strArea}`;
 		let title = document.createElement(`h3`);
 		title.textContent = foods.strArea;
 		a.classList.add(`cta`);
