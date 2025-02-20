@@ -42,11 +42,11 @@ function Meal(json) {
 
 	let category = document.createElement(`a`);
 	category.textContent = ` Catégorie : ${IdMeal.strCategory}`;
-	category.href = `categorie.html?c=${IdMeal.strCategory}`;
+	category.href = `ECF_BLANC/categorie.html?c=${IdMeal.strCategory}`;
 
 	let zone = document.createElement(`a`);
 	zone.textContent = ` Zone Géographique : ${IdMeal.strArea}`;
-	zone.href = `categorie.html?c=${IdMeal.strArea}`;
+	zone.href = `ECF_BLANC/categorie.html?c=${IdMeal.strArea}`;
 
 	// AppendChilds
 	figure.appendChild(img);
@@ -97,7 +97,7 @@ function CategoryMeal(json) {
 			let img = document.createElement(`img`);
 			img.src = foods.strCategoryThumb;
 
-			a.href = `categorie.html?c=${foods.strCategory}`;
+			a.href = `ECF_BLANC/categorie.html?c=${foods.strCategory}`;
 			let title = document.createElement(`h3`);
 			title.textContent = foods.strCategory;
 			button.textContent = `En savoir plus`;
