@@ -30,7 +30,7 @@ function Meal(json) {
 
 		// Récupération des informations
 
-		a.href = `ingredient.html?i=${foods.strIngredient}`;
+		a.href = `../ingredient.html?i=${foods.strIngredient}`;
 		let title = document.createElement(`h3`);
 		title.textContent = foods.strIngredient;
 		a.classList.add(`cta`);

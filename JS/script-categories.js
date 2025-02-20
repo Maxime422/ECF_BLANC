@@ -36,7 +36,7 @@ function Meal(json) {
 		let img = document.createElement(`img`);
 		img.src = foods.strCategoryThumb;
 
-		a.href = `categorie.html?c=${foods.strCategory}`;
+		a.href = `../categorie.html?c=${foods.strCategory}`;
 		let title = document.createElement(`h3`);
 		title.textContent = foods.strCategory;
 		button.textContent = `En savoir plus`;

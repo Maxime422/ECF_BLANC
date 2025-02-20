@@ -37,7 +37,7 @@ function Meal(json) {
 		img.src = foods.strMealThumb;
 
 		let a = document.createElement(`a`);
-		a.href = `meal.html?i=${foods.idMeal}`;
+		a.href = `../meal.html?i=${foods.idMeal}`;
 
 		let title = document.createElement(`h3`);
 		title.textContent = foods.strMeal;
