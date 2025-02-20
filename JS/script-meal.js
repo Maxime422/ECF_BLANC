@@ -41,12 +41,12 @@ function Meal(json) {
 
 	let category = document.createElement(`a`);
 	category.textContent = ` Catégorie : ${IdMeal.strCategory}`;
-	category.href = `ECF_BLANC/categorie.html?c=${IdMeal.strCategory}`;
+	category.href = `categorie.html?c=${IdMeal.strCategory}`;
 	category.classList.add(`bold`);
 
 	let zone = document.createElement(`a`);
 	zone.textContent = ` Zone Géographique : ${IdMeal.strArea}`;
-	zone.href = `ECF_BLANC/categorie.html?a=${IdMeal.strArea}`;
+	zone.href = `categorie.html?a=${IdMeal.strArea}`;
 	zone.classList.add(`bold`);
 
 	let instructions = document.createElement(`a`);
@@ -63,7 +63,7 @@ function Meal(json) {
 			const li = document.createElement('li');
 			const a = document.createElement('a');
 			a.textContent = IngredientIn;
-			a.href = `ECF_BLANC/ingredient.html?i=${IngredientIn}`;
+			a.href = `ingredient.html?i=${IngredientIn}`;
 			a.classList.add(`bold`);
 
 			li.appendChild(a);
