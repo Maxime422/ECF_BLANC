@@ -25,6 +25,7 @@ function Meal(json) {
 	json.meals.forEach((foods) => {
 		// Base de la structure (Figure et article)
 		let article = document.createElement(`article`);
+		article.classList.add(`center`);
 		let a = document.createElement(`a`);
 		console.log(a);
 

@@ -48,6 +48,7 @@ function Meal(json) {
 		console.log(foods.strMeal);
 
 		let article = document.createElement(`article`);
+		article.classList.add(`center`);
 		let figure = document.createElement(`figure`);
 
 		// Récupération des informations
