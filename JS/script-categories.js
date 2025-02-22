@@ -1,8 +1,8 @@
 /* eslint-disable prefer-const */
 
-// Récupérer toutes les catégories de l'API
+// Récupérer toutes les catégories de l`API
 async function categoriesMeal() {
-	const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+	const url = `https://www.themealdb.com/api/json/v1/1/categories.php`;
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {
@@ -30,6 +30,7 @@ function Meal(json) {
 		let div = document.createElement(`div`);
 		let button = document.createElement(`button`);
 		let a = document.createElement(`a`);
+		a.classList.add(`padding`);
 		let figure = document.createElement(`figure`);
 
 		// Récupération des informations

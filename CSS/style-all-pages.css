@@ -128,6 +128,12 @@ input[type='radio']:checked + label {
 	flex-wrap: wrap;
 }
 
+#zf article ul {
+	display: flex;
+	gap: var(--gap-medium);
+	flex-wrap: wrap;
+}
+
 /* Main */
 main {
 	min-height: 72vh;
@@ -150,6 +156,7 @@ main {
 	justify-content: space-between;
 	align-items: center;
 	gap: var(--gap-medium);
+	width: 100%;
 }
 
 .section #randomMealsSection figure {
@@ -158,7 +165,7 @@ main {
 }
 
 .figureReduct {
-	height: 20rem;
+	height: 30rem;
 	width: auto;
 }
 
@@ -209,13 +216,12 @@ main {
 	padding: var(--padding-top-bottom-extra);
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr auto;
+	grid-auto-rows: 1fr;
 	gap: var(--gap-large);
 }
 
 .grid a {
 	box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
-	padding: var(--padding-medium);
 	border-radius: var(--border-radius-medium);
 	display: flex;
 	flex-direction: column;
@@ -224,12 +230,18 @@ main {
 	gap: var(--gap-medium);
 }
 
+.padding {
+	padding: var(--padding-medium);
+	text-align: center;
+}
+
 .grid a:hover {
 	transform: scale(1.01);
 }
 
 .grid figure {
-	width: 80%;
+	width: 100%;
+	border-radius: 1rem 1rem 0rem 0rem;
 	margin: auto;
 	height: auto;
 }
@@ -307,25 +319,21 @@ main {
 
 /* Media 768px tablette */
 @media (max-width: 768px) {
-
-
 	.container {
 		width: 500px;
 	}
 
 	#firstHeader {
 		position: relative;
-		height:8rem;
-
+		height: 8rem;
 	}
-
 
 	#firstHeader ul {
 		position: absolute;
 		top: 100px;
 		left: 50%;
 		transform: translate(-50%, -50%);
-	  }
+	}
 
 	#footerPage .container {
 		display: flex;

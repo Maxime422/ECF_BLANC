@@ -1,19 +1,19 @@
 /* eslint-disable prefer-const */
 
-const button = document.querySelector('#submit');
+const button = document.querySelector(`#submit`);
 button.addEventListener(`click`, searchWord);
 
 // Récupérer les section pour pouvoir les supprimer lors des nouvelles recherches
-const section = document.querySelector('.grid');
+const section = document.querySelector(`.grid`);
 const messages = document.querySelector(`.messages`);
 
 function searchWord(event) {
 	event.preventDefault();
-	section.innerHTML = '';
-	messages.innerHTML = '';
+	section.innerHTML = ``;
+	messages.innerHTML = ``;
 
 	let searchValue = document.getElementById(`search`).value;
-	if (searchValue != '') {
+	if (searchValue != ``) {
 		searchMeal(searchValue);
 		console.log(searchValue);
 	} else {
@@ -62,6 +62,7 @@ function Meal(json) {
 		a.href = `./meal.html?i=${foods.idMeal}`;
 
 		let title = document.createElement(`h3`);
+		title.classList.add(`padding`);
 		title.textContent = foods.strMeal;
 
 		// AppendChilds

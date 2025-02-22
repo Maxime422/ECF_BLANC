@@ -1,8 +1,8 @@
 /* eslint-disable prefer-const */
 
-// Récupérer toutes les zones de l'API
+// Récupérer toutes les zones de l`API
 async function categoriesMeal() {
-	const url = 'https://www.themealdb.com/api/json/v1/1/list.php?i=list';
+	const url = `https://www.themealdb.com/api/json/v1/1/list.php?i=list`;
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {

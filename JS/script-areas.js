@@ -1,8 +1,8 @@
 /* eslint-disable prefer-const */
 
-// Récupérer toutes les zones de l'API
+// Récupérer toutes les zones de l`API
 async function categoriesMeal() {
-	const url = 'https://www.themealdb.com/api/json/v1/1/list.php?a=list';
+	const url = `https://www.themealdb.com/api/json/v1/1/list.php?a=list`;
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {
@@ -30,7 +30,6 @@ function Meal(json) {
 		console.log(a);
 
 		// Récupération des informations
-
 		a.href = `./area.html?a=${foods.strArea}`;
 		let title = document.createElement(`h3`);
 		title.textContent = foods.strArea;

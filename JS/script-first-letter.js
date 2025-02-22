@@ -1,5 +1,5 @@
 /* eslint-disable prefer-const */
-const submit = document.querySelector('.alphabet');
+const submit = document.querySelector(`.alphabet`);
 submit.addEventListener(`submit`, (event) => {
 	event.preventDefault();
 	searchLetters();
@@ -16,7 +16,7 @@ function searchLetters() {
 	}
 }
 
-const section = document.querySelector('.grid');
+const section = document.querySelector(`.grid`);
 const messages = document.querySelector(`.messages`);
 
 async function lettersMeals(letters) {
@@ -29,8 +29,8 @@ async function lettersMeals(letters) {
 		const json = await response.json();
 		console.log(json);
 
-		section.innerHTML = '';
-		messages.innerHTML = '';
+		section.innerHTML = ``;
+		messages.innerHTML = ``;
 		if (json.meals != null) {
 			Meal(json);
 		} else {
@@ -59,6 +59,7 @@ function Meal(json) {
 		a.href = `./meal.html?i=${foods.idMeal}`;
 
 		let title = document.createElement(`h3`);
+		title.classList.add(`padding`);
 		title.textContent = foods.strMeal;
 
 		// AppendChilds

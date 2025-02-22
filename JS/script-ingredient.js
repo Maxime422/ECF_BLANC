@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 
-// Récupérer l'URL du navigateur et chercher dans l'API la bonne zone
+// Récupérer l`URL du navigateur et chercher dans l`API la bonne zone
 const currentUrl = window.location.search;
 console.log(currentUrl);
 
@@ -41,6 +41,7 @@ function Meal(json) {
 		a.href = `./meal.html?i=${foods.idMeal}`;
 
 		let title = document.createElement(`h3`);
+		title.classList.add(`padding`);
 		title.textContent = foods.strMeal;
 
 		// AppendChilds

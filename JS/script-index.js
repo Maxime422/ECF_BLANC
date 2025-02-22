@@ -1,14 +1,14 @@
 /* eslint-disable prefer-const */
 
-// Boutton d'activation
-const buttonRandom = document.querySelector('#buttonRandom');
+// Boutton d`activation
+const buttonRandom = document.querySelector(`#buttonRandom`);
 buttonRandom.addEventListener(`click`, () => {
 	randomMeal();
 });
 
-// Récupérer un repas aléatoire de l'API
+// Récupérer un repas aléatoire de l`API
 async function randomMeal() {
-	const url = 'https://www.themealdb.com/api/json/v1/1/random.php';
+	const url = `https://www.themealdb.com/api/json/v1/1/random.php`;
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {
@@ -59,9 +59,9 @@ function Meal(json) {
 	section.appendChild(article);
 }
 
-// Récupérer toutes les catégories de l'API
+// Récupérer toutes les catégories de l`API
 async function categoriesMeal() {
-	const url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+	const url = `https://www.themealdb.com/api/json/v1/1/categories.php`;
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {
@@ -79,44 +79,44 @@ categoriesMeal();
 // Utiliser et afficher les éléments récupérés
 function CategoryMeal(json) {
 	const section = document.querySelector(`.grid`);
-	section.innerHTML = '';
-
+	section.innerHTML = ``;
 
 	for (let i = 0; i < 3; i++) {
 		let foods = json.categories[i];
-			// Base de la structure (Figure et article)
-			let article = document.createElement(`article`);
-			let subText = document.createElement(`span`);
-			let footer = document.createElement(`footer`);
-			let div = document.createElement(`div`);
-			let button = document.createElement(`button`);
-			let a = document.createElement(`a`);
-			let figure = document.createElement(`figure`);
+		// Base de la structure (Figure et article)
+		let article = document.createElement(`article`);
+		let subText = document.createElement(`span`);
+		let footer = document.createElement(`footer`);
+		let div = document.createElement(`div`);
+		let button = document.createElement(`button`);
+		let a = document.createElement(`a`);
+		a.classList.add(`padding`);
+		let figure = document.createElement(`figure`);
 
-			// Récupération des informations
-			let img = document.createElement(`img`);
-			img.src = foods.strCategoryThumb;
+		// Récupération des informations
+		let img = document.createElement(`img`);
+		img.src = foods.strCategoryThumb;
 
-			a.href = `./categorie.html?c=${foods.strCategory}`;
-			let title = document.createElement(`h3`);
-			title.textContent = foods.strCategory;
-			button.textContent = `En savoir plus`;
-			subText.textContent = `Catégorie`;
-			button.classList.add(`cta`);
-			button.classList.add(`mainCta`);
+		a.href = `./categorie.html?c=${foods.strCategory}`;
+		let title = document.createElement(`h3`);
+		title.textContent = foods.strCategory;
+		button.textContent = `En savoir plus`;
+		subText.textContent = `Catégorie`;
+		button.classList.add(`cta`);
+		button.classList.add(`mainCta`);
 
-			// AppendChilds
-			figure.appendChild(img);
+		// AppendChilds
+		figure.appendChild(img);
 
-			a.appendChild(figure);
+		a.appendChild(figure);
 
-			div.appendChild(subText);
-			div.appendChild(title);
-			footer.appendChild(div);
-			footer.appendChild(button);
-			a.appendChild(footer);
+		div.appendChild(subText);
+		div.appendChild(title);
+		footer.appendChild(div);
+		footer.appendChild(button);
+		a.appendChild(footer);
 
-			article.appendChild(a);
-			section.appendChild(article);
+		article.appendChild(a);
+		section.appendChild(article);
 	}
 }

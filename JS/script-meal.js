@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 
-// Récupérer l'URL du navigateur et chercher dans l'API le bon ID
+// Récupérer l`URL du navigateur et chercher dans l`API le bon ID
 const currentUrl = window.location.search;
 
 async function categoriesMeal() {
@@ -52,17 +52,17 @@ function Meal(json) {
 	let instructions = document.createElement(`a`);
 	instructions.textContent = `Instructions : ${IdMeal.strInstructions}`;
 
-	const list = document.createElement('ul');
+	const list = document.createElement(`ul`);
 	for (let i = 1; i <= 20; i++) {
 		const ingredient = `strIngredient${i}`;
 		const IngredientIn = IdMeal[ingredient];
 		console.log(IngredientIn);
-		if (IngredientIn === null) {
+		if (IngredientIn === null || IngredientIn === '') {
 			continue;
 		} else {
-			const li = document.createElement('li');
-			const a = document.createElement('a');
-			a.textContent = IngredientIn;
+			const li = document.createElement(`li`);
+			const a = document.createElement(`a`);
+			a.textContent = `- ${IngredientIn}`;
 			a.href = `./ingredient.html?i=${IngredientIn}`;
 			a.classList.add(`bold`);
 
