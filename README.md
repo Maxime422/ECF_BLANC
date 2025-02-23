@@ -38,7 +38,7 @@ Réalisé dans le cadre de la préparation à l'ECF Front-End du GRETA-CFA Prove
 
 ## 🛠 Fonctionnalités
 
-- ✅ Embarquement en application web (WPA) 
+- ✅ Embarquement en application web (PWA) 
 
 ## 🚧 Améliorations Futures
 
