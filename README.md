@@ -58,7 +58,6 @@ Réalisé dans le cadre de la préparation à l'ECF Front-End du GRETA-CFA Prove
 
 Pour toute question, contactez-moi :
 
-- **Email :** [germismaxime@gmail.com](mailto:germismaxime@gmail.com)
 - **LinkedIn :** [Germis Maxime](https://www.linkedin.com/in/maxime-germis)
 - **GitHub :** [Maxime422](https://github.com/Maxime422)
 
